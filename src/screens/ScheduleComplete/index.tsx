@@ -32,7 +32,7 @@ export function ScheduleComplete() {
         <Title>Carro alugado!</Title>
 
         <Message>
-          Agora você só precia ir {"\n"}
+          Agora você só precisa ir {"\n"}
           até a concessionária da RENTX {"\n"}
           pegar o seu veículo.
         </Message>
