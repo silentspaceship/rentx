@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { StatusBar, BackHandler } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import api from "../../services/api";
 import { CarDTO } from "../../dtos/CarDTO";
 
-import { StatusBar } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import Logo from "../../assets/logo.svg";
