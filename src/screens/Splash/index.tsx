@@ -17,7 +17,7 @@ const WIDTH = Dimensions.get("window").width;
 
 import { Container } from "./styles";
 
-export default function Splash() {
+export function Splash() {
   const navigation = useNavigation<any>();
 
   const splashAnimation = useSharedValue(0);
