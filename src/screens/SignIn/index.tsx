@@ -14,6 +14,7 @@ import { PasswordInput } from "../../components/PasswordInput";
 import * as Yup from "yup";
 
 import { Container, Header, Title, Subtitle, Footer, Form } from "./styles";
+import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
   const theme = useTheme();
@@ -22,6 +23,7 @@ export function SignIn() {
   const [password, setPassword] = useState("");
 
   const navigation = useNavigation<any>();
+  const { signIn } = useAuth();
 
   async function handleSignIn() {
     try {
@@ -34,7 +36,7 @@ export function SignIn() {
 
       await schema.validate({ email, password });
 
-      //Fazer login
+      signIn({ email, password });
     } catch (error) {
       if (error instanceof Yup.ValidationError) {
         Alert.alert("Erro", error.message);
@@ -58,7 +60,7 @@ export function SignIn() {
           <StatusBar
             barStyle="dark-content"
             backgroundColor="transparent"
-            // translucent
+            translucent
           />
 
           <Header>
